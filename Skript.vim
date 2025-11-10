@@ -4,8 +4,12 @@ syntax clear
 syntax match skriptComment "#.*"
 highlight link skriptComment Comment
 
+" String Variables
+syntax match skriptPlaceholder "%{[^{}]*}%"
+highlight link skriptPlaceholder Identifier
+
 " Strings
-syntax region skriptString start=/"/ skip=/\\"/ end=/"/
+syntax region skriptString start=/"/ skip=/\\"/ end=/"/ contains=skriptStringVariable
 highlight link skriptString String
 
 " Keywords
@@ -25,3 +29,7 @@ highlight link skriptNumber Number
 " awful anyway
 syntax match skriptVariable "{[^{}]*\%({[^{}]*\%({[^{}]*}[^{}]*\)*}[^{}]*\)*}"
 highlight link skriptVariable Identifier
+
+" String Variables
+syntax match skriptStringVariable "%{[^{}]*\%({[^{}]*\%({[^{}]*}[^{}]*\)*}[^{}]*\)*}%"
+highlight link skriptStringVariable Identifier
