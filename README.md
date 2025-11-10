@@ -7,10 +7,12 @@ vim.api.nvim_set_hl(0, "Operator", { fg = "#569CD6" })
 to your init.lua in ~/.config/nvim/init.lua
 
 to use this just place this fifle in ~/.config/nvim/syntax/skript.vim
-then add ```v
+then add 
+```v
 vim.filetype.add({
   extension = { sk = "skript" },
-})```
+})
+```
 to your init.lua
 
 
