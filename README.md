@@ -15,5 +15,4 @@ vim.filetype.add({
 ```
 to your init.lua
 
-
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/db0752e3-77ac-4b85-ae14-a3ae6fd83abd" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b2ca230b-6f92-446a-a7ed-eecab5ba7c30" />
