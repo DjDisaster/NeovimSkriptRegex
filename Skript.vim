@@ -9,7 +9,7 @@ syntax match skriptPlaceholder "%{[^{}]*}%"
 highlight link skriptPlaceholder Identifier
 
 " Strings
-syntax region skriptString start=/"/ skip=/\\"/ end=/"/ contains=skriptStringVariable
+syntax region skriptString start=/"/ skip=/\\"/ end=/"/ contains=skriptStringVariable,skriptChatCode
 highlight link skriptString String
 
 " Keywords
@@ -33,3 +33,12 @@ highlight link skriptVariable Identifier
 " String Variables
 syntax match skriptStringVariable "%{[^{}]*\%({[^{}]*\%({[^{}]*}[^{}]*\)*}[^{}]*\)*}%"
 highlight link skriptStringVariable Identifier
+
+" Booleans
+syntax keyword skriptBoolean true false yes no on off
+highlight link skriptBoolean Boolean
+
+" Colours
+syntax match skriptChatCode "&[0-9a-fA-FkKlLmMnNoOrR]"
+syntax match skriptChatCode "<#[0-9A-Fa-f]\{6}>"
+highlight link skriptChatCode Special
